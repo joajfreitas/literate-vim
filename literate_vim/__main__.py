@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 import click
 import sys
 import os
@@ -35,7 +34,7 @@ def weave_lines(lines: List[str], root: Path, filename: Path) -> str:
     viml_block = False
 
     for line in lines:
-        if "```viml" in line:
+        if "```viml" in line or "```lua" in line:
             viml_block = True
             continue
 
